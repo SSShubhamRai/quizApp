@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(135deg, #6f79a8, #a9c0e8); /* Soft gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 16px;
+    color: #333;
+}
+.app{
+    background: #fff;
+    width: 100%;
+    max-width: 600px;
+    margin:  0 auto;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.app h1{
+    font-size: 28px;
+    font-weight: bold;
+    color: #001e4d;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.quiz{
+    padding:20px 0 ;
+}
+.quiz h2{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#answer-button {
+    display: flex;
+    flex-direction: column;
+    gap:2px;
+}
+.btn{
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width:100% ;
+    padding: 15px;
+    border: 2px solid #222;
+    margin: 2px 0;
+    text-align: left;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 16px;
+}
+.btn:hover:not([disabled]){
+    background: #222;
+    color: #fff;
+}
+.btn:disabled{
+    cursor: not-allowed;
+    background-color: #ccc;
+    color: #666;
+}
+#next-btn{
+    background:#001e4d ;
+    color: #fff;
+    font-weight: 500;
+    width: 180px;
+    border: none;
+    padding: 15px;
+    margin: 20px auto 0;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    display:none ;
+    font-size: 16px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1) ;
+    animation: slideIn 0.5s ease-out;
+}
+#next-btn:hover {
+    background: #3b4d72;
+    transform: scale(1.05);
+}
+.correct {
+    background-color: #9aeabc;
+    border-color: #68c4a2;
+}
+
+.incorrect {
+    background-color: #ff9393;
+    border-color: #f66d6d;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.app {
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px); 
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
